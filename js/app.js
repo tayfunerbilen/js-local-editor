@@ -22,6 +22,7 @@ editor.setOptions({
     enableEmmet: true,
     showLineNumbers: false
 });
+editor.session.setMode("ace/mode/" + language);
 
 const notification = (msg, className = null, seconds = 1) => {
 
@@ -71,19 +72,13 @@ const getFiles = async (folder, parent = null) => {
         let icon = 'folder.png';
         if (entry.name.match(/\.css/g)) {
             icon = 'css.png';
-            language = 'css';
         } else if (entry.name.match(/\.js/g)) {
             icon = 'js.png';
-            language = 'javascript';
         } else if (entry.name.match(/\.html/g)) {
             icon = 'html.png';
-        } else if (entry.name.match(/\.php/g)) {
-            language = 'php';
         } else if (entry.isFile) {
             icon = 'file.png';
         }
-
-        editor.session.setMode("ace/mode/" + language);
 
         treeData.push({
             id: entry.name,
@@ -101,6 +96,21 @@ const readFile = (data) => {
             current = value;
             let file = await value.getFile();
             let content = await file.text();
+
+            if (value.name.match(/\.css/g)) {
+                language = 'css';
+            } else if (value.name.match(/\.js/g)) {
+                language = 'javascript';
+            } else if (value.name.match(/\.html/g)) {
+                language = 'html';
+            } else if (value.name.match(/\.php/g)) {
+                language = 'php';
+            } else {
+                language = 'html';
+            }
+
+            editor.session.setMode("ace/mode/" + language);
+
             editor.setValue(content);
         }
     });
