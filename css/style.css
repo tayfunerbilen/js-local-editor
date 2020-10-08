@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+}
+
+*:focus {
+    outline: 0;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    display: flex;
+    height: 100vh;
+    background: #000;
+}
+
+aside {
+    width: 300px;
+    min-width: 300px;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+}
+
+aside .button {
+    padding: 20px;
+    display: flex;
+    margin: 0 -5px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+aside .button button {
+    background: #1670c3;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+aside .jstree {
+    color: #fff;
+    padding: 10px 0;
+    flex: 1;
+    overflow: auto;
+}
+
+aside .jstree .jstree-anchor i {
+    background-size: 16px !important;
+}
+
+aside .jstree .jstree-hovered {
+    background: #333 !important;
+    box-shadow: none !important;
+}
+
+aside .jstree .jstree-clicked {
+    background: #eaf0ac !important;
+    color: #222 !important;
+    box-shadow: none !important;
+}
+
+
+main {
+    flex: 1;
+    display: flex;
+    padding: 10px 0;
+}
+
+main .message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    color: rgba(255, 255, 255, .5);
+}
+
+main .message code {
+    background: rgba(255, 255, 255, .1);
+    margin: 0 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+main #editor {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 15px;
+    line-height: 1.7;
+    display: none;
+}
+
+.ace-monokai .ace_gutter {
+    background: #000 !important;
+}
+
+.alert {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 42px;
+    background: #368f21;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms all;
+}
+
+.alert.error {
+    background: #9d1d1d;
+}
+
+.alert.active {
+    bottom: 25px;
+    opacity: 1;
+    visibility: visible;
+}
