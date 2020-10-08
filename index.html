@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Online Local Editor</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<aside>
+	<div class="button">
+		<button onclick="openFolder()">Open Folder</button>
+		<button onclick="newFile()">New File</button>
+	</div>
+	<div id="folder"></div>
+</aside>
+
+<main>
+	<div class="message" id="blank-message">
+		Klasör açmak için <code>CTRL + O</code> kısayolunu kullanabilirsiniz.
+	</div>
+	<div id="editor"></div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-searchbox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-static_highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/keybinding-vscode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-emmet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/mode-css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/mode-javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/mode-html.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/mode-php.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/theme-monokai.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/snippets/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/snippets/php.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/snippets/html.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/snippets/javascript.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.10/jstree.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.10/themes/default/style.min.css">
+<script src="js/app.js"></script>
+
+</body>
+</html>
